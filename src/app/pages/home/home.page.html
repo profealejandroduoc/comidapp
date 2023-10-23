@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header>
   <ion-toolbar color="danger">
     <ion-icon name="menu" slot="start" size="large"></ion-icon>
     <ion-title>
@@ -10,9 +10,20 @@
 <ion-content class="ion-padding">
   <ion-text color="dark" class="ion-text-center">
     <h1>Categorías de Comida</h1>
-    <ion-list *ngFor="let item of categorias" >
+  
+    <ion-list *ngFor="let item of categorias">
       <ion-item>
-        <ion-label>{{item.strCategory}} </ion-label>
+        <ion-card class="ion-padding" (click)="click(item.strCategory)">
+          <ion-img src="{{item.strCategoryThumb}}"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{item.strCategory}}</ion-card-title>
+            <ion-card-subtitle>Id:{{item.idCategory}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            {{item.strCategoryDescription}}
+          </ion-card-content>
+        </ion-card>
       </ion-item>
     </ion-list>
   </ion-text>

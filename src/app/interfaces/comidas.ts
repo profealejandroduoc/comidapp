@@ -7,4 +7,5 @@ export interface Categoria {
   strCategory: string;
   strCategoryThumb: string;
   strCategoryDescription: string;
+
 }

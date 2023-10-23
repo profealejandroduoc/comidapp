@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from 'src/app/interfaces/comidas';
 import { ServicioComidaService } from '../../services/servicio-comida.service';
-import { Categorias,Categoria } from 'src/app/interfaces/comidas'; 
+
 
 @Component({
   selector: 'app-home',
@@ -24,5 +25,11 @@ export class HomePage implements OnInit{
 
     console.log("hola");
     
+  }
+
+
+  click(id:any)
+  {
+    console.log(id);
   }
 }
