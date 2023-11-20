@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'scanear',
+    loadChildren: () => import('./pages/scanear/scanear.module').then( m => m.ScanearPageModule)
+  },
 ];
 
 @NgModule({
